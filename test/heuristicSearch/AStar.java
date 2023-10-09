@@ -1,6 +1,6 @@
 package heuristicSearch;
 
-import ch.fhnw.richards.Week_03.heuristicSearch.mapData.MapData;
+import heuristicSearch.mapData.MapData;
 
 import java.util.ArrayList;
 import java.util.Map;
