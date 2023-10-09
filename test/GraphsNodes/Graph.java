@@ -1,3 +1,7 @@
+package GraphsNodes;
+
+import GraphsNodes.Node;
+
 import java.util.*;
 
 class Graph {

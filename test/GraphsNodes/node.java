@@ -1,3 +1,5 @@
+package GraphsNodes;
+
 class Node {
     String id;
     double distance;
