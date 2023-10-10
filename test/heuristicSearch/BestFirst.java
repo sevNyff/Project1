@@ -27,7 +27,7 @@ public class BestFirst {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = bestFirst("A", "W");
+        Path path = bestFirst("Brugg_P", "Brugg_R");
         printPath(path.nodes);
     }
 
