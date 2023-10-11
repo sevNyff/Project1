@@ -1,6 +1,7 @@
 package heuristicSearch;
 
 import heuristicSearch.mapData.MapData;
+//import jdk.incubator.foreign.ResourceScope;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -97,8 +98,25 @@ public class AStar {
     private static long distanceBetween(String node, String goal) {
         MapData.GPS lastPos = nodeList.get(node);
         MapData.GPS goalPos = nodeList.get(goal);
+        long xDiff = 0;
+        long yDiff = 0;
+
+        try {
+            xDiff = lastPos.east() - goalPos.east();
+            yDiff = lastPos.north() - goalPos.north();
+        }catch(NullPointerException e){
+            System.out.println("NullPointerException caught");
+        }
+        return xDiff * xDiff + yDiff * yDiff;
+
+
+
+        /*          Alt
+        MapData.GPS lastPos = nodeList.get(node);
+        MapData.GPS goalPos = nodeList.get(goal);
         long xDiff = lastPos.east() - goalPos.east();
         long yDiff = lastPos.north() - goalPos.north();
         return xDiff * xDiff + yDiff * yDiff;
+        */
     }
 }

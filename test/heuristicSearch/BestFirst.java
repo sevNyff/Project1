@@ -95,8 +95,15 @@ public class BestFirst {
     private static long distanceBetween(String node, String goal) {
         MapData.GPS lastPos = nodeList.get(node);
         MapData.GPS goalPos = nodeList.get(goal);
-        long xDiff = lastPos.east() - goalPos.east();
-        long yDiff = lastPos.north() - goalPos.north();
+        long xDiff = 0;
+        long yDiff = 0;
+
+        try {
+            xDiff = lastPos.east() - goalPos.east();
+            yDiff = lastPos.north() - goalPos.north();
+        }catch(NullPointerException e){
+            System.out.println("NullPointerException caught");
+        }
         return xDiff * xDiff + yDiff * yDiff;
     }
 }
