@@ -26,7 +26,7 @@ public class AStar {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = aStar("Brugg_P", "Brugg_R");
+        Path path = aStar("Brugg_A", "Brugg_T");
         printPath(path.nodes);
     }
 
