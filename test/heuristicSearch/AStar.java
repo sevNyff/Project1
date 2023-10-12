@@ -17,6 +17,8 @@ public class AStar {
     private static Map<String, ArrayList<MapData.Destination>> adjList;
     private static Map<String, MapData.GPS> nodeList;
 
+    private static final ArrayList<Double> distanceSum = new ArrayList<>();
+
     public static void main(String[] args) {
         MapData data = null;
         try {
@@ -26,13 +28,21 @@ public class AStar {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = aStar("Brugg_A", "Brugg_T");
+        Path path = aStar("Brugg_A", "Brugg_G");
         printPath(path.nodes);
     }
 
     private static void printPath(ArrayList<String> path) {
         System.out.print("Final solution: ");
         for (String node : path) System.out.printf("%s ", node);
+        System.out.println();
+        long total = 0;
+        System.out.print("Total distance: ");
+        for(double distance : distanceSum) {
+            total += distance;
+        }
+        System.out.printf("%,d", total);
+        System.out.print("m");
         System.out.println();
     }
 
@@ -79,11 +89,16 @@ public class AStar {
     private static int bestPath(ArrayList<Path> paths, String goal) {
         int bestPath = 0;
         double smallestDistance = paths.get(0).distanceSoFar + paths.get(0).distanceToGoal;
+
         for (int i = 1; i < paths.size(); i++) {
+            double bestDist;
             double distanceThisPath = paths.get(i).distanceSoFar + paths.get(i).distanceToGoal;
             if (distanceThisPath < smallestDistance) {
                 bestPath = i;
                 smallestDistance = distanceThisPath;
+
+                //bestDist = paths.get(i).distanceSoFar;
+                //distanceSum.add(bestDist);
             }
         }
         return bestPath;
@@ -101,13 +116,17 @@ public class AStar {
         long xDiff = 0;
         long yDiff = 0;
 
+        long distance = 0;
+
         try {
             xDiff = lastPos.east() - goalPos.east();
             yDiff = lastPos.north() - goalPos.north();
+            distance = xDiff * xDiff + yDiff * yDiff;
+
         }catch(NullPointerException e){
             System.out.println("NullPointerException caught");
         }
-        return xDiff * xDiff + yDiff * yDiff;
+        return distance;
 
 
 
