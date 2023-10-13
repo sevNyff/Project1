@@ -58,8 +58,8 @@ Baden/Gartenstrasse/1590;2665132;1258712
 Baden/Martinsbergstrasse/27;2665041;1258681
 Baden/Martinsbergstrasse/36;2665021;1258748
 Baden/Bruggerstrasse/37;2665218;1258699
-Baden/St. Ursusstrasse/12;2665049;1258620
-Baden/St. Ursusstrasse/3;2665096;1258546
+Baden/St./Ursusstrasse/12;2665049;1258620
+Baden/St./Ursusstrasse/3;2665096;1258546
 Baden/Ruetistrasse/22;2665198;1258550
 Baden/Ruetistrasse/34;2665225;1258475
 Baden/Burghaldenstrasse/27;2665189;1258406
@@ -71,14 +71,14 @@ Baden/Martinsbergstrasse/18;2665180;1258620
 Baden/Martinsbergstrasse/8;2665247;1258583
 Aarau/Aeschbachweg/2;2646832;1249235
 Aarau/Industriestrasse/1;2646715;1249190
-Aarau/Hintere Bahnhofstrasse/102;2646624;1249155
+Aarau/Hintere/Bahnhofstrasse/102;2646624;1249155
 Aarau/Bleichmattstrasse/42;2646606;1248995
 Aarau/Frey-Heros-Strasse/21;2646310;1248922
 Aarau/Zschokkestrasse/12;2646204;1248943
 Aarau/Entfelderstrasse/19;2646148;1248776
 Aarau/Entfelderstrasse/1;2646010;1248886
 Aarau/Bahnhofstrasse/4;2645836;1249032
-Aarau/Vordere Vorstadt/31;2645802;1249027
+Aarau/Vordere/Vorstadt/31;2645802;1249027
 Aarau/Bahnhofstrasse/35;2645974;1249103
 Aarau/Feerstrasse/17;2646262;1249215
 Aarau/Kreuzplatz/1;2646527;1249327
@@ -141,7 +141,7 @@ Suhr/Bachstrasse/9;2646909;1248340
 Suhr/Waldhofweg/1;2647811;1248036
 Suhr/Gönhardweg/1;2647402;1248275
 Suhr/Gönhardweg/2;2647506;1248341
-Suhr/Neue Aarauerstrasse/1;2647093;1248410
+Suhr/Neue/Aarauerstrasse/1;2647093;1248410
 Suhr/Zollweg/1;2647257;1248565
 Suhr/Trammstrasse/1;2647621;1248400
 Suhr/Trammstrasse/2;2647699;1248077
@@ -159,12 +159,12 @@ Remigen/Sonnenbergstrasse/2;2656773;1263157
 Remigen/Leestrasse/24;2656827;1263119
 Remigen/Leeweg/11;2656908;1263039
 Remigen/Leestrasse/40;2656952;1263107
-Remigen/Obere Leestrasse/2;2656929;1263141
-Remigen/Obere Leestrasse/17;2656733;1263261
+Remigen/Obere/Leestrasse/2;2656929;1263141
+Remigen/Obere/Leestrasse/17;2656733;1263261
 Remigen/Leestrasse/14;2656685;1263122
 Remigen/Hintertrottenstrasse/4;2656685;1263030
 Remigen/Villigerstrasse/10;2656676;1262903
-Remigen/Am Schmittenbach/3;2656713;1262782
+Remigen/Am/Schmittenbach/3;2656713;1262782
 Remigen/Winkelstrasse/23;2656846;1262819
 Remigen/Winkelstrasse/16;2656874;1262719
 Remigen/Villigerstrasse/1;2656550;1262932

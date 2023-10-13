@@ -48,15 +48,15 @@ Suhr/Bachstrasse/4;Suhr/Bachstrasse/5;40.1
 Suhr/Bachstrasse/5;Suhr/Bachstrasse/6;58.2
 Suhr/Bachstrasse/3;Suhr/Gönhardweg/1;159.0
 Suhr/Gönhardweg/1;Suhr/Gönhardweg/2;122.6
-Suhr/Gönhardweg/1;Suhr/Neue Aarauerstrasse/1;290.7
+Suhr/Gönhardweg/1;Suhr/Neue/Aarauerstrasse/1;290.7
 Suhr/Gönhardweg/1;Suhr/Waldhofweg/1;474.0
 Suhr/Waldhofweg/1;Suhr/Bachstrasse/7;76.7
 Suhr/Waldhofweg/1;Suhr/Trammstrasse/2;74.8
 Suhr/Trammstrasse/2;Suhr/Trammstrasse/1;410.2
 Suhr/Gönhardweg/2;Suhr/Trammstrasse/1;129.5
 Suhr/Gönhardweg/2;Suhr/Zollweg/1;335.0
-Suhr/Neue Aarauerstrasse/1;Suhr/Zollweg/1;191.5
-Suhr/Neue Aarauerstrasse/1;Aarau/Südallee/2;245.4
+Suhr/Neue/Aarauerstrasse/1;Suhr/Zollweg/1;191.5
+Suhr/Neue/Aarauerstrasse/1;Aarau/Südallee/2;245.4
 Suhr/Zollweg/1;Aarau/Südallee/1;225.7
 Aarau/Südallee/2;Aarau/Südallee/1;228.9
 Aarau/Südallee/2;Aarau/Bachstrasse/1;153.4
@@ -76,8 +76,8 @@ Remigen/Gansingerstrasse/18;Remigen/Mnthalerstrasse/4;62.84
 Remigen/Gansingerstrasse/18;Remigen/Villigerstrasse/1;124.45
 Remigen/Villigerstrasse/1;Remigen/Rinikerstrasse/4;72.11
 Remigen/Villigerstrasse/1;Remigen/Villigerstrasse/10;132.60
-Remigen/Villigerstrasse/10;Remigen/Am Schmittenbach/3;159.64
-Remigen/Am Schmittenbach/3;Remigen/Winkelstrasse/23;152.08
+Remigen/Villigerstrasse/10;Remigen/Am/Schmittenbach/3;159.64
+Remigen/Am/Schmittenbach/3;Remigen/Winkelstrasse/23;152.08
 Remigen/Winkelstrasse/23;Remigen/Winkelstrasse/16;115.43
 Remigen/Villigerstrasse/10;Remigen/Hintertrottenstrasse/4;148.38
 Remigen/Hintertrottenstrasse/4;Remigen/Leestrasse/14;106.23
@@ -88,8 +88,8 @@ Remigen/Sonnenbergstrasse/2;Remigen/Geissbergstrasse/3;273.73
 Remigen/Sonnenbergstrasse/2;Remigen/Sonnenbergstrasse/5;273.73
 Remigen/Leestrasse/24;Remigen/Leeweg/11;116.78
 Remigen/Leeweg/11;Remigen/Leestrasse/40;159.80
-Remigen/Leestrasse/40;Remigen/Obere Leestrasse/2;77.56
-Remigen/Obere Leestrasse/2;Remigen/Obere Leestrasse/17;232.82
+Remigen/Leestrasse/40;Remigen/Obere/Leestrasse/2;77.56
+Remigen/Obere/Leestrasse/2;Remigen/Obere/Leestrasse/17;232.82
 Remigen/Leestrasse/40;Remigen/Leestrasse/24;127.69
 Olten;Eibach;5200
 Zofingen;Olten;12600
@@ -98,7 +98,7 @@ Krienz;Hergiswil/Seetrasse3;6240
 Hergiswil/Pilatusstrasse/1;Hergiswil/Pilatusstrasse/2;546.32
 Hergiswil/Pilatusstrasse/2;Hergiswil/Sonnenbergstrasse;537.63
 Hergiswil/Sonnenbergstrasse;Hergiswil/Seestrasse;271.55
-Hergiswil/Seetrasse 1;Hergiswil/Wylstrasse/1;51.82
+Hergiswil/Seetrasse/1;Hergiswil/Wylstrasse/1;51.82
 Hergiswil/Wylstrasse/1;Hergiswil/Wylstrasse/2;89.97
 Hergiswil/Wylstrasse/2;Hergiswil/Seetrasse/2;75.51
 Hergsiwil/Seetrasse/2;Hergiswil/Seetrasse/3;154.22
@@ -207,23 +207,23 @@ Baden/Stadtturmstrasse/10;Baden/Stadtturmstrasse/19;204.86
 Baden/Stadtturmstrasse/19;Baden/Ruetistrasse/1;155.22
 Baden/Hahnrainweg/6;Baden/Ruetistrasse/1;123.26
 Baden/Martinsbergstrasse/8;Baden/Ruetistrasse/22;288.54
-Baden/Ruetistrasse/22;Baden/St. Ursusstrasse/3;109.09
-Baden/St. Ursusstrasse/3;Baden/Ruetistrasse/34;138.66
+Baden/Ruetistrasse/22;Baden/St./Ursusstrasse/3;109.09
+Baden/St./Ursusstrasse/3;Baden/Ruetistrasse/34;138.66
 Baden/Ruetistrasse/34;Baden/Burghaldenstrasse/27;378.86
-Baden/St. Ursusstrasse/3;Baden/St. Ursusstrasse/12;96.34
+Baden/St./Ursusstrasse/3;Baden/St./Ursusstrasse/12;96.34
 Aarau/Aeschbachweg/2;Aarau/Industriestrasse/1;125.39
-Aarau/Industriestrasse/1;Aarau/Hintere Bahnhofstrasse/102;97.76
+Aarau/Industriestrasse/1;Aarau/Hintere/Bahnhofstrasse/102;97.76
 Aarau/Industriestrasse/1;Aarau/Kreuzplatz/1;232.42
-Aarau/Hintere Bahnhofstrasse/102;Aarau/Bleichmattstrasse/42;170.46
-Aarau/Hintere Bahnhofstrasse/102;Aarau/Entfelderstrasse/1;710.84
+Aarau/Hintere/Bahnhofstrasse/102;Aarau/Bleichmattstrasse/42;170.46
+Aarau/Hintere/Bahnhofstrasse/102;Aarau/Entfelderstrasse/1;710.84
 Aarau/Bleichmattstrasse/42;Aarau/Frey-Heros-Strasse/21;390.14
 Aarau/Frey-Heros-Strasse/21;Aarau/Zschokkestrasse/12;108.18
 Aarau/Zschokkestrasse/12;Aarau/Entfelderstrasse/19;176.71
 Aarau/Entfelderstrasse/19;Aarau/Entfelderstrasse/1;176.41
 Aarau/Entfelderstrasse/1;Aarau/Bahnhofstrasse/4;232.11
-Aarau/Bahnhofstrasse/4;Aarau/Vordere Vorstadt/31;33.59
+Aarau/Bahnhofstrasse/4;Aarau/Vordere/Vorstadt/31;33.59
 Aarau/Bahnhofstrasse/4;Aarau/Bahnhofstrasse/35;155.29
-Aarau/Vordere Vorstadt/31;Aarau/Ziegelrain/1;139.27
+Aarau/Vordere/Vorstadt/31;Aarau/Ziegelrain/1;139.27
 Aarau/Ziegelrain/1;Aarau/Laurenzenvorstadt/1;245.61
 Aarau/Ziegelrain/1;Aarau/Asylstrasse/1;170.35
 Aarau/Laurenzenvorstadt/1;Aarau/Laurenzervorstadt/12;41.23
