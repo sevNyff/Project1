@@ -17,10 +17,10 @@ import java.util.Map;
  * easy to understand and use.
  */
 public class MapData {
-    //private static final String EdgeFile = "/Users/Severin/Desktop/BruggEdges.csv";
-    //private static final String NodeFile = "/Users/Severin/Desktop/BruggNodes.csv";
-    private static final String EdgeFile = "/Users/Kevin/Desktop/Edges_all.csv";
-    private static final String NodeFile = "/Users/Kevin/Desktop/Nodes_all.csv";
+    private static final String EdgeFile = "/Users/Severin/Desktop/Edges_all.csv";
+    private static final String NodeFile = "/Users/Severin/Desktop/Nodes_all.csv";
+    //private static final String EdgeFile = "/Users/Kevin/Desktop/Edges_all.csv";
+    //private static final String NodeFile = "/Users/Kevin/Desktop/Nodes_all.csv";
     private static final Map<String, ArrayList<Destination>> adjacencyList = new HashMap<>();
     private static final Map<String, GPS> nodes = new HashMap<>();
 
@@ -52,7 +52,7 @@ public class MapData {
 
     private void createNodes() throws Exception {
         File file = new File(NodeFile); // See Readme.txt !!!
-        Files.lines(Paths.get(file.toURI())).map(line -> line.split(";")).forEach(a -> nodes.put(a[0].trim(), new GPS(Integer.parseInt(a[1]), Integer.parseInt(a[2]))));
+        Files.lines(Paths.get(file.toURI())).map(line -> line.split(";")).forEach(a -> nodes.put(a[0], new GPS(Integer.parseInt(a[1]), Integer.parseInt(a[2]))));
     }
 
     private void createAdjacencyList() throws Exception {
