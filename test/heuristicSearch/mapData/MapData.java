@@ -19,8 +19,8 @@ import java.util.Map;
 public class MapData {
     //private static final String EdgeFile = "/Users/Severin/Desktop/BruggEdges.csv";
     //private static final String NodeFile = "/Users/Severin/Desktop/BruggNodes.csv";
-    private static final String EdgeFile = "/Users/Kevin/Desktop/KriensEdges.csv";
-    private static final String NodeFile = "/Users/Kevin/Desktop/KriensNodes.csv";
+    private static final String EdgeFile = "/Users/Kevin/Desktop/BruggEdges.csv";
+    private static final String NodeFile = "/Users/Kevin/Desktop/BruggNodes.csv";
     private static final Map<String, ArrayList<Destination>> adjacencyList = new HashMap<>();
     private static final Map<String, GPS> nodes = new HashMap<>();
 
