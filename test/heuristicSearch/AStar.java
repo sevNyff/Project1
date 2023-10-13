@@ -28,7 +28,7 @@ public class AStar {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = aStar("Brugg_A", "Brugg_G");
+        Path path = aStar("Brugg_A", "Brugg_B");
         printPath(path.nodes);
     }
 
@@ -95,6 +95,8 @@ public class AStar {
             double distanceThisPath = paths.get(i).distanceSoFar + paths.get(i).distanceToGoal;
             if (distanceThisPath < smallestDistance) {
                 bestPath = i;
+                bestDist = paths.get(i).distanceSoFar;
+                distanceSum.add(bestDist);
                 smallestDistance = distanceThisPath;
 
                 //bestDist = paths.get(i).distanceSoFar;
