@@ -1,0 +1,26 @@
+Projektarbeiter: Kevin Bernet / Severin Nyffenegger
+
+Phase 1:
+
+In der ersten Phase des Projektes haben wir je rund 20 Nodes in unserem Wohnort gezeichnet.
+Diese Datenpunkte haben wir mit Edges verbunden und anschliessend in einer Excel Tabelle erfasst.
+Unsere erfassten stellten wir in Moodle auf das Public Forum, damit diese zusammengefasst werden können.
+
+Phase 2:
+
+Unsere erste Aufgabe bestand darin die bereits erstellten Algorithmen mit unseren Daten zu testen.
+Dazu nutzten wir bei der Heurisitc Search die Klasse MapData und Test. Beim ersten Versuch das CSV
+einzulesen hat es nicht ganz geklappt, da wir in der Excel-Tabelle noch Zeichen verwendet haben,
+welche IntelliJ nicht lesen kann. Als wir diese ersetzt haben funktionierte das Einlesen problemlos.
+
+Unser nächster Schritt bestand darin den A* und BestFirst Algorithmus zu testen. Dies führte zu unseren
+ersten Problemen, da in der Methode distanceBetween() die lastPos immer als null gespeichert war und somit
+keine Distanz berechnet werden konnte. Nach Absprache mit Bradley implementierte ich eine try & catch Methode
+um diese NullPointerException abzufangen. Diese Methode funktionierte auch problemlos, jedoch wurde sie
+bei jeder Abfrage des Algorithmus ausgelöst. Erst nach einer intensiven Betrachtung des Codes zusammen mit
+Bradley in der FHNW sahen wir, dass in der ersten Zeile am Anfang immer ein Leerzeichen dazuzählt. Den Grund,
+warum dieses Leerzeichen existiert, fanden wir nicht heraus und erstellten zum Testen ein neues CSV-File mit
+den selben Daten. Glücklicherweise wurde danach die NullPointerException nicht mehr ausgelöst.
+
+
+

@@ -1,25 +1,22 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+package Testdata;
 
-public class DepthFirst_AdjacencyList {
-    private static final Map<Character, char[]> adjList = new HashMap<>();
+import java.util.ArrayList;
+
+public class DepthFirst_AdjacencyMatrix {
+    private static final int[][] adjMatrix = {
+            { 0, 1, 0, 0, 0, 0, 0, 0},
+            { 1, 0, 1, 1, 0, 0, 0, 0},
+            { 0, 1, 0, 0, 0, 0, 0, 0},
+            { 0, 1, 0, 0, 1, 0, 0, 0},
+            { 0, 0, 0, 1, 0, 1, 1, 0},
+            { 0, 0, 0, 0, 1, 0, 0, 1},
+            { 0, 0, 0, 0, 1, 0, 0, 1},
+            { 0, 0, 0, 0, 0, 1, 1, 0}
+    };
 
     public static void main(String[] args) {
-        initMapData();
         ArrayList<Character> path = depthFirst('B', 'G');
         printPath(path);
-    }
-
-    private static void initMapData() {
-        adjList.put('A', new char[]{'B'});
-        adjList.put('B', new char[]{'A','C','D'});
-        adjList.put('C', new char[]{'B'});
-        adjList.put('D', new char[]{'B','E'});
-        adjList.put('E', new char[]{'D','F','G'});
-        adjList.put('F', new char[]{'E','H'});
-        adjList.put('G', new char[]{'E','H'});
-        adjList.put('H', new char[]{'F','G'});
     }
 
     private static void printPath(ArrayList<Character> path) {
@@ -40,16 +37,19 @@ public class DepthFirst_AdjacencyList {
         if (current == end) { // Base case - we are finished!
             // Nothing to do...
         } else { // Recursive case - add a node to the path
-            char[] connectedNodes = adjList.get(current);
-            for (char c : connectedNodes) {
-                if (!haveBeenThere(path, c)) {
-                    path.add(c);
-                    depthFirstRecursive(path, c, end);
-                    // If we have a solution, stop the loop!
-                    if (path.get(path.size() - 1) == end) break;
+            int[] row = adjMatrix[current - 'A']; // get row from matrix
+            for (int i = 0; i < row.length; i++) {
+                if (row[i] != 0) {
+                    char c = (char) (i + 'A');
+                    if (!haveBeenThere(path, c)) {
+                        path.add(c);
+                        depthFirstRecursive(path, c, end);
+                        // If we have a solution, stop the loop!
+                        if (path.get(path.size() - 1) == end) break;
 
-                    // If we are here, remove the last node from the path, so we can add a different one
-                    path.remove(path.size() - 1);
+                        // If we are here, remove the last node from the path, so we can add a different one
+                        path.remove(path.size() - 1);
+                    }
                 }
             }
         }

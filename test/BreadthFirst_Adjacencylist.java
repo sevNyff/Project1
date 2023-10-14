@@ -1,3 +1,5 @@
+package ch.fhnw.richards.Week_03;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

@@ -3,6 +3,8 @@ package heuristicSearch;
 import heuristicSearch.mapData.MapData;
 //import jdk.incubator.foreign.ResourceScope;
 
+import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -20,6 +22,7 @@ public class AStar {
     private static final ArrayList<Double> distanceSum = new ArrayList<>();
 
     public static void main(String[] args) {
+        double timeBefore = System.nanoTime();
         MapData data = null;
         try {
             data = new MapData();
@@ -28,8 +31,13 @@ public class AStar {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = aStar("Brugg_A", "Brugg_G");
+        Path path = aStar("Brugg_A", "Brugg_T");
         printPath(path.nodes);
+
+        double timeAfter = System.nanoTime();
+        double totalRuntime = timeAfter - timeBefore;
+        System.out.print("Runtime in nanoseconds: ");
+        System.out.print(totalRuntime);
     }
 
     private static void printPath(ArrayList<String> path) {

@@ -18,7 +18,10 @@ public class BestFirst {
     private static Map<String, ArrayList<MapData.Destination>> adjList;
     private static Map<String, MapData.GPS> nodeList;
 
+    private static final ArrayList<Double> distanceSum = new ArrayList<>();
+
     public static void main(String[] args) {
+        double timeBefore = System.nanoTime();
         MapData data = null;
         try {
             data = new MapData();
@@ -29,11 +32,25 @@ public class BestFirst {
         nodeList = data.getNodes();
         Path path = bestFirst("Brugg_P", "Brugg_R");
         printPath(path.nodes);
+
+        double timeAfter = System.nanoTime();
+        double totalRuntime = timeAfter - timeBefore;
+        System.out.print("Runtime in nanoseconds: ");
+        System.out.print(totalRuntime);
     }
 
     private static void printPath(ArrayList<String> path) {
         System.out.print("Final solution: ");
         for (String node : path) System.out.printf("%s ", node);
+        System.out.println();
+
+        long total = 0;
+        System.out.print("Total distance: ");
+        for(double distance : distanceSum) {
+            total += distance;
+        }
+        System.out.printf("%,d", total);
+        System.out.print("m");
         System.out.println();
     }
 
