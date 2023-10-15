@@ -14,7 +14,7 @@ public class AStar {
      * We use an inner class "Path" because our paths not only contain a list of nodes visited,
      * and also a heuristic value: how close is the last node to the final goal?
      */
-    private record Path(ArrayList<String> nodes, double distanceSoFar, long distanceToGoal) {};
+    private record Path(ArrayList<String> nodes, double distanceSoFar, long distanceToGoal, double totalDistance) {};
 
     private static Map<String, ArrayList<MapData.Destination>> adjList;
     private static Map<String, MapData.GPS> nodeList;
@@ -31,8 +31,8 @@ public class AStar {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = aStar("Brugg_A", "Brugg_T");
-        printPath(path.nodes);
+        Path path = aStar("Brugg_A", "Brugg_G");
+        printPath(path);
 
         double timeAfter = System.nanoTime();
         double totalRuntime = timeAfter - timeBefore;
@@ -40,16 +40,14 @@ public class AStar {
         System.out.print(totalRuntime);
     }
 
-    private static void printPath(ArrayList<String> path) {
+    private static void printPath(Path path) {
+        ArrayList<String> nodes = path.nodes;
         System.out.print("Final solution: ");
-        for (String node : path) System.out.printf("%s ", node);
+        for (String node : nodes) System.out.printf("%s ", node);
         System.out.println();
-        long total = 0;
+
         System.out.print("Total distance: ");
-        for(double distance : distanceSum) {
-            total += distance;
-        }
-        System.out.printf("%,d", total);
+        System.out.printf("%.1f", path.totalDistance);
         System.out.print("m");
         System.out.println();
     }
@@ -59,7 +57,7 @@ public class AStar {
         ArrayList<String> startingNodeList = new ArrayList<>();
         startingNodeList.add(start);
         long startingDistance = distanceBetween(start, end);
-        paths.add(new Path(startingNodeList, 0, startingDistance)); // Add starting path to list
+        paths.add(new Path(startingNodeList, 0, startingDistance, startingDistance)); // Add starting path to list
 
         while (paths.size() > 0) {
             // Find the path whose end-node is closest to our goal
@@ -78,7 +76,8 @@ public class AStar {
                     ArrayList<String> newNodes = (ArrayList<String>) oldNodes.clone();
                     newNodes.add(d.node());
                     double newDistanceSoFar = oldPath.distanceSoFar + d.distance();
-                    paths.add(new Path(newNodes, newDistanceSoFar, distanceBetween(d.node(), end)));
+                    double totalDistance = newDistanceSoFar + distanceBetween(d.node(), end);
+                    paths.add(new Path(newNodes, newDistanceSoFar, distanceBetween(d.node(), end), totalDistance));
                 }
             }
         }
