@@ -7,6 +7,7 @@ import java.sql.SQLOutput;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Map;
+import java.util.Scanner;
 
 public class AStar {
 
@@ -22,6 +23,7 @@ public class AStar {
     private static final ArrayList<Double> distanceSum = new ArrayList<>();
 
     public static void main(String[] args) {
+
         double timeBefore = System.nanoTime();
         MapData data = null;
         try {
@@ -31,7 +33,10 @@ public class AStar {
         }
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
-        Path path = aStar("Brugg_A", "Brugg_G");
+        //Get the user inputs and put them into an array
+        String[] startEnd = userInput();
+
+        Path path = aStar(startEnd[0], startEnd[1]);
         printPath(path);
 
         double timeAfter = System.nanoTime();
@@ -146,5 +151,30 @@ public class AStar {
         long yDiff = lastPos.north() - goalPos.north();
         return xDiff * xDiff + yDiff * yDiff;
         */
+    }
+
+    private static String[] userInput(){
+        //User interaction
+        // This loop will set lastNode to the last key in the map
+        String lastNode = null;
+        for (String node : nodeList.keySet()) {
+            lastNode = node;
+        }
+        String last = lastNode.split("_")[1];
+
+
+        System.out.println(last);
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Where are you? (From A to " + last + ")");
+        String input = in.nextLine();
+        String startInput = lastNode.split("_")[0] + "_" + input.toUpperCase();
+        System.out.println("Where do you want to go?(From A to " + last + ")");
+        input = in.nextLine();
+        String endInput = lastNode.split("_")[0]+ "_" + input.toUpperCase();
+        in.close();
+        String[] returnStringArray = {startInput, endInput};
+        return returnStringArray;
+        //End User Interaction
     }
 }

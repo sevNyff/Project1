@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -25,7 +26,7 @@ public class MapData {
     private static final String NodeFile = "C:\\Users\\Kevin\\OneDrive\\Desktop\\BruggNodes.csv";
 
     private static final Map<String, ArrayList<Destination>> adjacencyList = new HashMap<>();
-    private static final Map<String, GPS> nodes = new HashMap<>();
+    private static final Map<String, GPS> nodes = new LinkedHashMap<>();
 
     /**
      * Simple class for GPS coordinates
