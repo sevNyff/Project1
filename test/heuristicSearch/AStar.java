@@ -34,9 +34,9 @@ public class AStar {
         adjList = data.getAdjacencyList();
         nodeList = data.getNodes();
         //Get the user inputs and put them into an array
-        String[] startEnd = userInput();
+        String[] userInput = userInput();
 
-        Path path = aStar(startEnd[0], startEnd[1]);
+        Path path = aStar(userInput[0], userInput[1]);
         printPath(path);
 
         double timeAfter = System.nanoTime();
