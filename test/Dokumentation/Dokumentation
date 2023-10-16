@@ -15,7 +15,7 @@ welche IntelliJ nicht lesen kann. Als wir diese ersetzt haben funktionierte das 
 
 Unser nächster Schritt bestand darin den A* und BestFirst Algorithmus zu testen. Dies führte zu unseren
 ersten Problemen, da in der Methode distanceBetween() die lastPos immer als null gespeichert war und somit
-keine Distanz berechnet werden konnte. Nach Absprache mit Bradley implementierte ich eine try & catch Methode
+keine Distanz berechnet werden konnte. Nach Absprache mit Bradley implementierten wir eine try & catch Methode
 um diese NullPointerException abzufangen. Diese Methode funktionierte auch problemlos, jedoch wurde sie
 bei jeder Abfrage des Algorithmus ausgelöst. Erst nach einer intensiven Betrachtung des Codes zusammen mit
 Bradley in der FHNW sahen wir, dass in der ersten Zeile am Anfang immer ein Leerzeichen dazuzählt. Den Grund,
