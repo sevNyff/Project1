@@ -30,5 +30,15 @@ dass sich ein logischer Fehler in der Datei gab, da man nicht Ortsübergreifend 
 davon aus, dass ein Edge fehlt oder etwas nicht korrekt verbunden wurde. Wir haben deshalb auf unsere
 persönlichen Daten zurückgegriffen, da diese funktionierten.
 
-
+Als nächstes haben wir noch einige zusätzliche Features in das bestehende A* Algorithmus integriert. Wir
+wollten sehen, wie lange die Berechnungen dauern und haben dann in der Main Methode mit System.nanoTime()
+die Zeit vor und nach dem A* Algorithmus aufgerufen und die Differenz wird in der Konsole ausgegeben.
+Weiter haben wir  uns dazu entschieden, dass wir die zurückgelegte Strecke auch interessant finden und haben
+die dann implementiert. Dazu haben wir der Klass Path noch ein weiteres Attribut (double totalDistance)
+gegeben. Die wird mit jedem weiterem Node erhöt mit der Distanz zum vorherigen Node.
+Schlussendlich wollten wir, das das Progam interaktiv wird. Dazu haben wir die Methode userInput geschrieben.
+Die Methode nimmt aus dem ausgewählten NodeListe den letzen Node (Brugg = T, Kriens = AA) und gibt die in der
+Konsole aus. Das fanden wir wichtig, dass der User weiss, in welchem Raum er sich bewegen kann. Der User wird
+gefragt, wo er sich befindet. Er muss dann Buchstaben (am Beispiel von Brugg von A bis T) eingeben. Dann dasselbe
+mit, wo er hin will. Dann wird das Ergebnis in der Konsole ausgegeben.
 
