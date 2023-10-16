@@ -22,5 +22,13 @@ Bradley in der FHNW sahen wir, dass in der ersten Zeile am Anfang immer ein Leer
 warum dieses Leerzeichen existiert, fanden wir nicht heraus und erstellten zum Testen ein neues CSV-File mit
 den selben Daten. Glücklicherweise wurde danach die NullPointerException nicht mehr ausgelöst.
 
+Als die Dataliste der gesamten Klasse erstellt wurde, wollten wir unseren Algorithmus damit testen, jedoch
+konnten wir das File nicht einlesen. Zuerst waren Zeichen darin enthalten, welche nicht erkannt wurden,
+danach gab es noch weitere Fehler wie falsche Spalten Anzahl und tausender Trennzeichen. Nach ein paar
+Versuchen klappte es dann mit dem Einlesen und wir konnten Anfangen zu testen. Jedoch stellte sich heraus,
+dass sich ein logischer Fehler in der Datei Vergab, da man nicht Ortsübergreifend suchen konnte. Wir gehen
+davon aus, dass ein Edge fehlt oder etwas nicht korrekt verbunden wurde. Wir haben deshalb auf unsere
+persönlichen Daten zurückgegriffen, da diese funktionierten.
+
 
 

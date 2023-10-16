@@ -18,12 +18,12 @@ import java.util.Map;
  * easy to understand and use.
  */
 public class MapData {
-    //private static final String EdgeFile = "/Users/Severin/Desktop/BruggEdges.csv";
-    //private static final String NodeFile = "/Users/Severin/Desktop/BruggNodes.csv";
+    private static final String EdgeFile = "/Users/Severin/Desktop/BruggEdges.csv";
+    private static final String NodeFile = "/Users/Severin/Desktop/BruggNodes.csv";
     //private static final String EdgeFile = "/Users/Kevin/Desktop/Edges_all.csv";
     //private static final String NodeFile = "/Users/Kevin/Desktop/Nodes_all.csv";
-    private static final String EdgeFile = "C:\\Users\\Kevin\\OneDrive\\Desktop\\BruggEdges.csv";
-    private static final String NodeFile = "C:\\Users\\Kevin\\OneDrive\\Desktop\\BruggNodes.csv";
+    //private static final String EdgeFile = "C:\\Users\\Kevin\\OneDrive\\Desktop\\BruggEdges.csv";
+    //private static final String NodeFile = "C:\\Users\\Kevin\\OneDrive\\Desktop\\BruggNodes.csv";
 
     private static final Map<String, ArrayList<Destination>> adjacencyList = new HashMap<>();
     private static final Map<String, GPS> nodes = new LinkedHashMap<>();
