@@ -77,7 +77,5 @@ public class MapData {
         }
         destinations.add(new Destination(to, Double.parseDouble(dist)));
     }
-    public Map<String, ArrayList<Destination>> getGraphData() {
-        return adjacencyList;
-    }
+
 }

@@ -1,0 +1,44 @@
+Projektarbeiter: Kevin Bernet / Severin Nyffenegger
+
+Phase 1:
+
+In der ersten Phase des Projektes haben wir je rund 20 Nodes in unserem Wohnort gezeichnet.
+Diese Datenpunkte haben wir mit Edges verbunden und anschliessend in einer Excel Tabelle erfasst.
+Unsere erfassten stellten wir in Moodle auf das Public Forum, damit diese zusammengefasst werden können.
+
+Phase 2:
+
+Unsere erste Aufgabe bestand darin die bereits erstellten Algorithmen mit unseren Daten zu testen.
+Dazu nutzten wir bei der Heurisitc Search die Klasse MapData und Test. Beim ersten Versuch das CSV
+einzulesen hat es nicht ganz geklappt, da wir in der Excel-Tabelle noch Zeichen verwendet haben,
+welche IntelliJ nicht lesen kann. Als wir diese ersetzt haben funktionierte das Einlesen problemlos.
+
+Unser nächster Schritt bestand darin den A* und BestFirst Algorithmus zu testen. Dies führte zu unseren
+ersten Problemen, da in der Methode distanceBetween() die lastPos immer als null gespeichert war und somit
+keine Distanz berechnet werden konnte. Nach Absprache mit Bradley implementierten wir eine try & catch Methode
+um diese NullPointerException abzufangen. Diese Methode funktionierte auch problemlos, jedoch wurde sie
+bei jeder Abfrage des Algorithmus ausgelöst. Erst nach einer intensiven Betrachtung des Codes zusammen mit
+Bradley in der FHNW sahen wir, dass in der ersten Zeile am Anfang immer ein Leerzeichen dazuzählt. Den Grund,
+warum dieses Leerzeichen existiert, fanden wir nicht heraus und erstellten zum Testen ein neues CSV-File mit
+den selben Daten. Glücklicherweise wurde danach die NullPointerException nicht mehr ausgelöst.
+
+Als die Dataliste der gesamten Klasse erstellt wurde, wollten wir unseren Algorithmus damit testen, jedoch
+konnten wir das File nicht einlesen. Zuerst waren Zeichen darin enthalten, welche nicht erkannt wurden,
+danach gab es noch weitere Fehler wie falsche Spalten Anzahl und tausender Trennzeichen. Nach ein paar
+Versuchen klappte es dann mit dem Einlesen und wir konnten Anfangen zu testen. Jedoch stellte sich heraus,
+dass sich ein logischer Fehler in der Datei gab, da man nicht Ortsübergreifend suchen konnte. Wir gehen
+davon aus, dass ein Edge fehlt oder etwas nicht korrekt verbunden wurde. Wir haben deshalb auf unsere
+persönlichen Daten zurückgegriffen, da diese funktionierten.
+
+Als nächstes haben wir noch einige zusätzliche Features in das bestehende A* Algorithmus integriert. Wir
+wollten sehen, wie lange die Berechnungen dauern und haben dann in der Main Methode mit System.nanoTime()
+die Zeit vor und nach dem A* Algorithmus aufgerufen und die Differenz wird in der Konsole ausgegeben.
+Weiter haben wir  uns dazu entschieden, dass wir die zurückgelegte Strecke auch interessant finden und haben
+die dann implementiert. Dazu haben wir der Klasse Path noch ein weiteres Attribut (double totalDistance)
+gegeben. Die wird mit jedem weiterem Node erhöt mit der Distanz zum vorherigen Node.
+Schlussendlich wollten wir, das das Program interaktiv wird. Dazu haben wir die Methode userInput geschrieben.
+Die Methode nimmt aus dem ausgewählten NodeListe den letzen Node (Brugg = T, Kriens = AA) und gibt die in der
+Konsole aus. Das fanden wir wichtig, dass der User weiss, in welchem Raum er sich bewegen kann. Der User wird
+gefragt, wo er sich befindet. Er muss dann Buchstaben (am Beispiel von Brugg von A bis T) eingeben. Dann dasselbe
+mit, wo er hin will. Schlussendlich wird das Ergebnis in der Konsole ausgegeben.
+

@@ -20,7 +20,7 @@ public class AStar {
     private static Map<String, ArrayList<MapData.Destination>> adjList;
     private static Map<String, MapData.GPS> nodeList;
 
-    private static final ArrayList<Double> distanceSum = new ArrayList<>();
+
 
     public static void main(String[] args) {
 
@@ -103,12 +103,12 @@ public class AStar {
         double smallestDistance = paths.get(0).distanceSoFar + paths.get(0).distanceToGoal;
 
         for (int i = 1; i < paths.size(); i++) {
-            double bestDist;
+
             double distanceThisPath = paths.get(i).distanceSoFar + paths.get(i).distanceToGoal;
             if (distanceThisPath < smallestDistance) {
                 bestPath = i;
-                bestDist = paths.get(i).distanceSoFar;
-                distanceSum.add(bestDist);
+
+
                 smallestDistance = distanceThisPath;
 
                 //bestDist = paths.get(i).distanceSoFar;
@@ -124,7 +124,7 @@ public class AStar {
      * Because calculating the square-root is slow, and doesn't change anything
      * for this heuristic. So we really return the *square* of the distance.
      */
-    private static long distanceBetween(String node, String goal) {
+    static long distanceBetween(String node, String goal) {
         MapData.GPS lastPos = nodeList.get(node);
         MapData.GPS goalPos = nodeList.get(goal);
         long xDiff = 0;
@@ -152,7 +152,7 @@ public class AStar {
         */
     }
 
-    private static String[] userInput(){
+    static String[] userInput(){
 
         Scanner in = new Scanner(System.in);
         System.out.println("Where are you?");
