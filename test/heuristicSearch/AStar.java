@@ -153,24 +153,12 @@ public class AStar {
     }
 
     private static String[] userInput(){
-        //User interaction
-        // This loop will set lastNode to the last key in the map
-        String lastNode = null;
-        for (String node : nodeList.keySet()) {
-            lastNode = node;
-        }
-        String last = lastNode.split("_")[1];
-
-
-        System.out.println(last);
 
         Scanner in = new Scanner(System.in);
-        System.out.println("Where are you? (From A to " + last + ")");
-        String input = in.nextLine();
-        String startInput = lastNode.split("_")[0] + "_" + input.toUpperCase();
-        System.out.println("Where do you want to go?(From A to " + last + ")");
-        input = in.nextLine();
-        String endInput = lastNode.split("_")[0]+ "_" + input.toUpperCase();
+        System.out.println("Where are you?");
+        String startInput = in.nextLine();
+        System.out.println("Where do you want to go?");
+        String endInput = in.nextLine();
         in.close();
         String[] returnStringArray = {startInput, endInput};
         return returnStringArray;
